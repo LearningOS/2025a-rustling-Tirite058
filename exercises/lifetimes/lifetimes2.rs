@@ -21,7 +21,7 @@ fn main() {
     let result;
     {
         let string2 = String::from("xyz");
-        result = string1.as_str(); // 正确用法
+        result = string1.as_str(); 
     }
     println!("The longest string is '{}'", result);
 }
