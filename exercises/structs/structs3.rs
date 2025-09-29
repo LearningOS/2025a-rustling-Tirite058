@@ -1,4 +1,5 @@
 // structs3.rs
+// I AM DONE
 //
 // Structs contain data, but can also have logic. In this exercise we have
 // defined the Package struct and we want to test some logic attached to it.

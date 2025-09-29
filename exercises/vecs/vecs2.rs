@@ -1,4 +1,5 @@
 // vecs2.rs
+// I AM DONE
 //
 // A Vec of even numbers is given. Your task is to complete the loop so that
 // each number in the Vec is multiplied by 2.

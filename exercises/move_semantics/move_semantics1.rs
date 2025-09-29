@@ -1,4 +1,5 @@
 // move_semantics1.rs
+// I AM DONE
 //
 // Execute `rustlings hint move_semantics1` or use the `hint` watch subcommand
 // for a hint.

@@ -1,4 +1,5 @@
 // if2.rs
+// I AM DONE
 //
 // Step 1: Make me compile!
 // Step 2: Get the bar_for_fuzz and default_to_baz tests passing!

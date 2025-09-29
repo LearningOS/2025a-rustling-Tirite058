@@ -1,4 +1,5 @@
 // move_semantics5.rs
+// I AM DONE
 //
 // Make me compile only by reordering the lines in `main()`, but without adding,
 // changing or removing any of them.

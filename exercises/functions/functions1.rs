@@ -1,4 +1,5 @@
 // functions1.rs
+// I AM DONE
 //
 // Execute `rustlings hint functions1` or use the `hint` watch subcommand for a
 // hint.

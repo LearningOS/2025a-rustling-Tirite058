@@ -1,4 +1,5 @@
 // variables4.rs
+// I AM DONE
 //
 // Execute `rustlings hint variables4` or use the `hint` watch subcommand for a
 // hint.

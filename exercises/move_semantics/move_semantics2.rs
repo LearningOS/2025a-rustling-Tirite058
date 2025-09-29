@@ -1,4 +1,5 @@
 // move_semantics2.rs
+// I AM DONE
 //
 // Expected output:
 // vec0 has length 3, with contents `[22, 44, 66]`

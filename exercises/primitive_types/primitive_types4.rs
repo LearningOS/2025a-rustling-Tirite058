@@ -1,4 +1,5 @@
 // primitive_types4.rs
+// I AM DONE
 //
 // Get a slice out of Array a where the ??? is so that the test passes.
 //

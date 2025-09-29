@@ -1,4 +1,5 @@
 // enums2.rs
+// I AM DONE
 //
 // Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
 // hint.
