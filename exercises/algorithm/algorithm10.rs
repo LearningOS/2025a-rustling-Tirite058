@@ -56,11 +56,11 @@ pub trait Graph {
     fn nodes(&self) -> HashSet<&String> {
         self.adjacency_table().keys().collect()
     }
-    fn edges(&self) -> Vec<(&str, &str, i32)> {
+    fn edges(&self) -> Vec<(&String, &String, i32)> {
         let mut edges = Vec::new();
         for (from_node, from_node_neighbours) in self.adjacency_table() {
             for (to_node, weight) in from_node_neighbours {
-                edges.push((from_node.as_str(), to_node.as_str(), *weight));
+                edges.push((from_node, to_node, *weight));
             }
         }
         edges
@@ -107,8 +107,10 @@ mod test_undirected_graph {
         println!("Expected edges count: {}", expected_edges.len());
         println!("Actual edges count: {}", actual_edges.len());
         
-        for edge in expected_edges.iter() {
-            assert!(actual_edges.contains(edge), "Missing expected edge: {:?}", edge);
+        for expected in expected_edges.iter() {
+            let found = actual_edges.iter()
+                .any(|(f, t, w)| f.as_str() == expected.0 && t.as_str() == expected.1 && w == &expected.2);
+            assert!(found, "Missing expected edge: {:?}", expected);
         }
     }
 }
