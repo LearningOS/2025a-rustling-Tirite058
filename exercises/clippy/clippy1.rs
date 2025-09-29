@@ -11,8 +11,6 @@
 
 // I AM DONE
 
-use std::f32;
-
 fn main() {
     let pi = std::f32::consts::PI;
     let radius = 5.0f32;
