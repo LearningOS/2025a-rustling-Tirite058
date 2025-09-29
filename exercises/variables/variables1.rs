@@ -1,5 +1,4 @@
 // variables1.rs
-// I AM DONE
 //
 // Make me compile!
 //

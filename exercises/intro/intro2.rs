@@ -1,5 +1,4 @@
 // intro2.rs
-// I AM DONE
 //
 // Make the code print a greeting to the world.
 //
