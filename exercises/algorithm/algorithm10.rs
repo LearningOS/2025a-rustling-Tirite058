@@ -56,11 +56,11 @@ pub trait Graph {
     fn nodes(&self) -> HashSet<&String> {
         self.adjacency_table().keys().collect()
     }
-    fn edges(&self) -> Vec<(&String, &String, i32)> {
+    fn edges(&self) -> Vec<(&str, &str, i32)> {
         let mut edges = Vec::new();
         for (from_node, from_node_neighbours) in self.adjacency_table() {
             for (to_node, weight) in from_node_neighbours {
-                edges.push((from_node, to_node, *weight));
+                edges.push((from_node.as_str(), to_node.as_str(), *weight));
             }
         }
         edges
@@ -95,15 +95,20 @@ mod test_undirected_graph {
         graph.add_edge(("b", "c", 10));
         graph.add_edge(("c", "a", 7));
         let expected_edges = [
-            (&String::from("a"), &String::from("b"), 5),
-            (&String::from("b"), &String::from("a"), 5),
-            (&String::from("c"), &String::from("a"), 7),
-            (&String::from("a"), &String::from("c"), 7),
-            (&String::from("b"), &String::from("c"), 10),
-            (&String::from("c"), &String::from("b"), 10),
+            ("a", "b", 5),
+            ("b", "a", 5),
+            ("c", "a", 7),
+            ("a", "c", 7),
+            ("b", "c", 10),
+            ("c", "b", 10),
         ];
+        let actual_edges = graph.edges();
+        println!("Actual edges: {:?}", actual_edges);
+        println!("Expected edges count: {}", expected_edges.len());
+        println!("Actual edges count: {}", actual_edges.len());
+        
         for edge in expected_edges.iter() {
-            assert_eq!(graph.edges().contains(edge), true);
+            assert!(actual_edges.contains(edge), "Missing expected edge: {:?}", edge);
         }
     }
 }
